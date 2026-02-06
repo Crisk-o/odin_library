@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="scripts" href="scripts.js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><button id="newBookBtn" placeholder="Add a new book">New Book</button></div>
+    <div id="form-container" class="hidden">
+        <form id="book-form">
+            <label for="book-title">Title of Book:</label>
+            <input type="text" id="book-title" name="book-title" placeholder="Book Title" minlength="1" required><br>
+            <label for="book-author">Author of Book:</label>
+            <input type="text" id="book-author" plaeholder="Book Author" minlength="1" required><br>
+            <label for="book-noPages">Number of Pages:</label>
+            <input type="text" id="book-noPages" placeholder="Number of Pages" minlength="1" pattern="[0-9]+" required><br>
+            <label for="book-alreadyRead">Already Read:</label>
+            <input type="text" id="book-alreadyRead" placeholder="t/f/T/F" pattern="[tfTF]?" required><br>
+        </form>  
+    </div>
+</body>
+</html>
