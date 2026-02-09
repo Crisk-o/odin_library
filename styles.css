@@ -1,0 +1,48 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0px); /* Optional: add a slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* I did not create the animation thing above. Please learn more about keyFrames and animations*/
+.hidden {
+    visibility: hidden;
+}
+.unhidden{
+    animation: fadeIn 0.5s ease-in forwards;
+    visibility: visible;
+    
+}
+#library-container{
+    display: flex;
+    background-color: aquamarine;
+
+}
+.bookCard {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    width: fit-content;
+    height: 300px;
+}
+
+.bookCardInnerDiv {
+    font-size: 16px;
+    text-wrap: nowrap;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    background-color: lightgray;    
+}
+.bookCardInnerDiv > h3 {
+    margin: 0;
+};
