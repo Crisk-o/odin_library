@@ -8,7 +8,21 @@
     <title>Odin's Library</title>
 </head>
 <body>
-    <div id="newBookBtnDiv"><button id="newBookBtn" placeholder="Add a new book">New Book</button></div>
+    <div id="headerContainer">
+        <h1 id="library-title">Odin's Library</h1>
+    </div>
+    <div id="userInfoContainer">
+        <div id="userInfoContainerInner">
+            <img id="user-avatar" src="/web_dev/images/dicebear_avataaaaars-neutral/avataaarsNeutral-1770317599988.svg" height="100px" width="auto" alt="User Icon">
+            <div id="userInfoInnerText">
+                <p style="margin: 0;">Welcome back,</p>
+                <h2 style="margin: 0;">Odin</h2>
+                <p style="margin: 0;">(@odinuser)</p>
+            </div>
+        </div>
+    </div>
+    <div id="buttonsContainer"><button id="newBookBtn">Add Book</button><button id="print-library">Print Library</button></div>
+
     <!-- Form Container --> 
     <dialog id="form-dialog">
         <div id="form-container">
@@ -20,15 +34,16 @@
                 <label for="book-noPages">Number of Pages:</label>
                 <input type="text" id="book-noPages" placeholder="Number of Pages" minlength="1" pattern="[0-9]+" required><br>
                 <label for="book-alreadyRead">Already Read:</label>
-                <input type="text" id="book-alreadyRead" placeholder="t/f/T/F" pattern="[tfTF]?" required><br>
+                <input type="checkbox" id="book-alreadyRead"><br>
                 <label for="submitBtn">Submit Form</label>
                 <button type="submit" id="submitBtn" value="Submit Form">Submit Book</button>
             </form>  
         </div>
     </dialog>
-    <div><button id="print-library">Print Library</button></div>
-    <div id="library-container" class="hidden">
-        <!-- add book cards here with JS -->
+    <div id="library-container">
+        <div id="newBookCardContainer">
+            <!-- add book cards here with JS -->
+        </div>
     </div>
 </body>
 </html>
