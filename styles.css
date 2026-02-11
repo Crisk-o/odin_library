@@ -106,15 +106,14 @@ body {
     background-color: #F5F5DC;
     padding: 10px;
     width: 100%;
-    height: fit-content;
+    height: fit-content; 
 }
  #newBookCardContainer {
     display: grid;
-    grid-template-columns: repeat(4, 300px);
-    grid-template-rows: repeat(2, 50%);
-    justify-content: center;
-    margin: auto;
-    width: 80%; 
+    grid-template-columns: repeat(auto-fill, 225px);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    width: 100%; 
+    height: fit-content;
 } 
 
 #addNewBookCard{
@@ -143,19 +142,18 @@ body {
     color: #f6f2ea;
 }
 
-
-
 .bookCard {
     display: flex;
     flex-direction: column;
     border: 1px solid #A28B23;
     border-radius: 15px;
     margin: 10px;
-    width: 250px;
-    max-width: 300px;
-    height: 300px;
-    max-height: 400px;
+    width: 200px;
+    max-width: 250px;
+    height: 250px;
+    max-height: 300px;
     box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.562);
+    animation: fadeIn 0.5s ease-in forwards;
 
 }
 
