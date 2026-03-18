@@ -18,11 +18,28 @@ newBookBtn.addEventListener("click", () => {
     formDialog.showModal();
 });
 
+const bookTitle = document.getElementById('book-title');
+bookTitle.addEventListener('input', (event) => {
+    bookTitle.setCustomValidity("");
+    if(bookTitle.validity.tooShort){
+        bookTitle.setCustomValidity("Book title must be at least 2 characters long!")
+    }
+    if(bookTitle.validity.valueMissing){
+        bookTitle.setCustomValidity("A book title is required!");
+    }
+});
+const bookPages = document.getElementById('book-noPages');
+bookPages.addEventListener("input", (event) => {
+    bookPages.setCustomValidity("");
+    if(bookPages.value == "0"){
+        bookPages.setCustomValidity("Number of pages must be greater than 0");
+    }
+})
+
 /*Creates a new book and pushes it to library array -- DO THIS ON FORM SUBMISSION */ 
 function addBookToLibrary(){
-    const bookTitle = document.getElementById('book-title');
+    // const bookTitle = document.getElementById('book-title');
     const bookAuthor = document.getElementById('book-author');
-    const bookPages = document.getElementById('book-noPages');
     const bookRead = document.getElementById('book-alreadyRead');
     const book = new Book(bookTitle.value, bookAuthor.value, bookPages.value, bookRead.value);
     myLibrary.push(book); /* Use .value of property to get the actual value from form input*/

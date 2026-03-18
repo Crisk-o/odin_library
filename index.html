@@ -28,11 +28,11 @@
         <div id="form-container">
             <form id="book-form" method="dialog">
                 <label for="book-title">Title of Book:</label>
-                <input type="text" id="book-title" name="book-title" placeholder="Book Title" minlength="1" required><br>
+                <input type="text" id="book-title" name="book-title" placeholder="Book Title" minlength="2" maxlength="10" required><br>
                 <label for="book-author">Author of Book:</label>
                 <input type="text" id="book-author" plaeholder="Book Author" minlength="1" required><br>
                 <label for="book-noPages">Number of Pages:</label>
-                <input type="text" id="book-noPages" placeholder="Number of Pages" minlength="1" pattern="[0-9]+" required><br>
+                <input type="number" id="book-noPages" placeholder="Number of Pages" minlength="1" pattern="[0-9]+" step="1" required><br>
                 <label for="book-alreadyRead">Already Read:</label>
                 <input type="checkbox" id="book-alreadyRead"><br>
                 <label for="submitBtn">Submit Form</label>
